@@ -1,0 +1,16 @@
+{
+  "name": "AdrianMarciniuk",
+  "version": "2.0.1",
+  "scripts": {
+    "build": "JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build",
+    "build-dev": "bundle exec jekyll serve --livereload --incremental --host=0.0.0.0"
+  },
+  "author": "Adrian Marciniuk <marciniuk.adrian123@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^2.0.0"
+  }
+}
