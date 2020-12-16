@@ -8,9 +8,9 @@
   "author": "Adrian Marciniuk <marciniuk.adrian123@gmail.com>",
   "private": true,
   "dependencies": {
-    "autoprefixer": "^10.0.2",
+    "autoprefixer": "^10.1.0",
     "postcss": "^8.2.1",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^2.0.0"
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
   }
 }
