@@ -45,6 +45,61 @@ document.querySelectorAll(".loading").forEach(async (element) => {
   });
 });
 
+if (window.location.pathname === "/en/") {
+  let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
+  let x = setInterval(() => {
+    let now = new Date().getTime();
+    let t = now - deadline;
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((t % (1000 * 60)) / 1000);
+    document.querySelector("#web-dev").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    if (t < 0) {
+      clearInterval(x);
+      document.querySelector("#web-dev").innerHTML = "*coś się zepsuło*";
+    }
+  }, 1000);
+}
+
+if (window.location.pathname === "/en/") {
+  let deadline = new Date("Oct 2, 2018 16:37:24 GMT+0200").getTime();
+  let x = setInterval(() => {
+    let now = new Date().getTime();
+    let t = now - deadline;
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((t % (1000 * 60)) / 1000);
+    document.querySelector("#linux").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    if (t < 0) {
+      clearInterval(x);
+      document.querySelector("#linux").innerHTML = "*coś się zepsuło*";
+    }
+  }, 1000);
+}
+
+if (window.location.pathname === "/en/") {
+  let deadline = new Date("Aug 3, 2021 23:59:59 GMT+0200").getTime();
+  let x = setInterval(() => {
+    let now = new Date().getTime();
+    let t = deadline - now;
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((t % (1000 * 60)) / 1000);
+    document.querySelector("#wiek").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    if (t < 0) {
+      clearInterval(x);
+      document.querySelector("#wiek").innerHTML =
+        "*już mam 20 ale zapomniałem zmienić, sorki*";
+    }
+  }, 1000);
+}
+
 if (window.location.pathname === "/pl/") {
   let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
   let x = setInterval(() => {
