@@ -86,13 +86,13 @@ if (window.location.pathname === "/en/") {
   let x = setInterval(() => {
     let now = new Date().getTime();
     let t = deadline - now;
-    let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor((t / (1000 * 60 * 60 * 24)) - (t / (1000 * 60 * 60 * 24 * 7) * 7));
+    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
+    let days = Math.floor((t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
     document.querySelector("#wiek").innerHTML =
-      weeks + "w " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
     if (t < 0) {
       clearInterval(x);
       document.querySelector("#wiek").innerHTML =
@@ -106,13 +106,13 @@ if (window.location.pathname === "/pl/") {
   let x = setInterval(() => {
     let now = new Date().getTime();
     let t = now - deadline;
-    let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor((t / (1000 * 60 * 60 * 24)) - (t / (1000 * 60 * 60 * 24 * 7) * 7));
+    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
+    let days = Math.floor((t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
     document.querySelector("#web-dev").innerHTML =
-      weeks + "w " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
     if (t < 0) {
       clearInterval(x);
       document.querySelector("#web-dev").innerHTML = "*coś się zepsuło*";
@@ -125,13 +125,13 @@ if (window.location.pathname === "/pl/") {
   let x = setInterval(() => {
     let now = new Date().getTime();
     let t = now - deadline;
-    let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor((t / (1000 * 60 * 60 * 24)) - (t / (1000 * 60 * 60 * 24 * 7) * 7));
+    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
+    let days = Math.floor((t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
     document.querySelector("#linux").innerHTML =
-      weeks + "w " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
     if (t < 0) {
       clearInterval(x);
       document.querySelector("#linux").innerHTML = "*coś się zepsuło*";
@@ -144,13 +144,13 @@ if (window.location.pathname === "/pl/") {
   let x = setInterval(() => {
     let now = new Date().getTime();
     let t = deadline - now;
-    let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor((t / (1000 * 60 * 60 * 24)) - (t / (1000 * 60 * 60 * 24 * 7) * 7));
+    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
+    let days = Math.floor((t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7);
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
     document.querySelector("#wiek").innerHTML =
-      weeks + "w " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
     if (t < 0) {
       clearInterval(x);
       document.querySelector("#wiek").innerHTML =
