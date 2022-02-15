@@ -168,3 +168,5 @@ function toggleNav() {
   }
 }
 document.querySelector("#hamburger").addEventListener("click", toggleNav);
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
