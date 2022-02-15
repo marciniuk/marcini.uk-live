@@ -87,7 +87,7 @@ if (window.location.pathname === "/en/") {
     let now = new Date().getTime();
     let t = deadline - now;
     //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor((t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
+    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
@@ -107,7 +107,7 @@ if (window.location.pathname === "/pl/") {
     let now = new Date().getTime();
     let t = now - deadline;
     //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor((t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
+    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
@@ -126,7 +126,7 @@ if (window.location.pathname === "/pl/") {
     let now = new Date().getTime();
     let t = now - deadline;
     //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor((t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
+    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
@@ -145,7 +145,7 @@ if (window.location.pathname === "/pl/") {
     let now = new Date().getTime();
     let t = deadline - now;
     //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor((t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7);
+    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7);
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
