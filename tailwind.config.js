@@ -3,7 +3,7 @@ const { colors } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   // darkMode: 'class',
-  purge: ["./_site/**/*.html", "./_site/**/*.js"],
+  content: ["./_site/**/*.html", "./_site/**/*.js"],
   future: {
     removeDeprecatedGapUtilities: true,
   },
