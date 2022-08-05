@@ -140,7 +140,7 @@ if (window.location.pathname === "/pl/") {
 }
 
 if (window.location.pathname === "/pl/") {
-  let deadline = new Date("Aug 3, 2022 23:59:59 GMT+0200").getTime();
+  let deadline = new Date("Aug 3, 2023 23:59:59 GMT+0200").getTime();
   let x = setInterval(() => {
     let now = new Date().getTime();
     let t = deadline - now;
@@ -154,7 +154,7 @@ if (window.location.pathname === "/pl/") {
     if (t < 0) {
       clearInterval(x);
       document.querySelector("#wiek").innerHTML =
-        "*już mam 20 ale zapomniałem zmienić, sorki*";
+        "*już mam 22 ale zapomniałem zmienić, sorki*";
     }
   }, 1000);
 }
