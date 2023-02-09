@@ -174,3 +174,88 @@ function toggleNav() {
 document.querySelector("#hamburger").addEventListener("click", toggleNav);
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
+
+let str10 = document.getElementById("Oceny").innerHTML;
+let res10 = str10.replace(
+  /o10/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res10;
+
+let str9 = document.getElementById("Oceny").innerHTML;
+let res9 = str9.replace(
+  /o9/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res9;
+
+let str8 = document.getElementById("Oceny").innerHTML;
+let res8 = str8.replace(
+  /o8/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res8;
+
+let str7 = document.getElementById("Oceny").innerHTML;
+let res7 = str7.replace(
+  /o7/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res7;
+
+let str6 = document.getElementById("Oceny").innerHTML;
+let res6 = str6.replace(
+  /o6/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res6;
+
+let str5 = document.getElementById("Oceny").innerHTML;
+let res5 = str5.replace(
+  /o5/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res5;
+
+let str4 = document.getElementById("Oceny").innerHTML;
+let res4 = str4.replace(
+  /o4/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res4;
+
+let str3 = document.getElementById("Oceny").innerHTML;
+let res3 = str3.replace(
+  /o3/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res3;
+
+let str2 = document.getElementById("Oceny").innerHTML;
+let res2 = str2.replace(
+  /o2/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res2;
+
+let str1 = document.getElementById("Oceny").innerHTML;
+let res1 = str1.replace(
+  /o1/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star-half-stroke p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res1;
+
+let str0 = document.getElementById("Oceny").innerHTML;
+let res0 = str0.replace(
+  /o0/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-regular fa-star p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = res0;
+
+let strS = document.getElementById("Oceny").innerHTML;
+let resS = strS.replace(
+  /oS/g,
+  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-heart p-1"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i></div>'
+);
+document.getElementById("Oceny").innerHTML = resS;
+
