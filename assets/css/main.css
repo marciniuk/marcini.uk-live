@@ -548,14 +548,14 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .-mt-2 {
   margin-top: -0.5rem;
 }
 .mt-3 {
   margin-top: 0.75rem;
-}
-.mb-4 {
-  margin-bottom: 1rem;
 }
 .mt-5 {
   margin-top: 1.25rem;
@@ -568,6 +568,15 @@ video {
 }
 .-mt-3 {
   margin-top: -0.75rem;
+}
+.-mt-14 {
+  margin-top: -3.5rem;
+}
+.ml-0 {
+  margin-left: 0px;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 .ml-auto {
   margin-left: auto;
@@ -589,15 +598,6 @@ video {
 }
 .mt-10 {
   margin-top: 2.5rem;
-}
-.-mt-14 {
-  margin-top: -3.5rem;
-}
-.ml-0 {
-  margin-left: 0px;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 .-mb-6 {
   margin-bottom: -1.5rem;
@@ -668,6 +668,15 @@ video {
 .w-72 {
   width: 18rem;
 }
+.w-auto {
+  width: auto;
+}
+.w-1\/3 {
+  width: 33.333333%;
+}
+.w-2\/3 {
+  width: 66.666667%;
+}
 .w-5\/6 {
   width: 83.333333%;
 }
@@ -680,20 +689,11 @@ video {
 .w-20 {
   width: 5rem;
 }
-.w-auto {
-  width: auto;
-}
 .w-64 {
   width: 16rem;
 }
 .w-96 {
   width: 24rem;
-}
-.w-1\/3 {
-  width: 33.333333%;
-}
-.w-2\/3 {
-  width: 66.666667%;
 }
 .w-24 {
   width: 6rem;
@@ -812,6 +812,22 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+.bg-sky-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+}
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+.bg-blue-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
 .bg-yellow-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(161 98 7 / var(--tw-bg-opacity));
@@ -827,10 +843,6 @@ video {
 .bg-gray-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(204 204 204 / var(--tw-bg-opacity));
-}
-.bg-blue-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 .bg-blue-500 {
   --tw-bg-opacity: 1;
@@ -871,18 +883,6 @@ video {
 .bg-purple-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 33 168 / var(--tw-bg-opacity));
-}
-.bg-slate-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-.bg-sky-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
-}
-.bg-blue-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 .bg-red-600 {
   --tw-bg-opacity: 1;
@@ -1003,11 +1003,11 @@ video {
 .pr-4 {
   padding-right: 1rem;
 }
-.pb-4 {
-  padding-bottom: 1rem;
-}
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
 }
 .pl-1 {
   padding-left: 0.25rem;
@@ -1097,6 +1097,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(245 158 11 / var(--tw-text-opacity));
 }
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 .text-green-400 {
   --tw-text-opacity: 1;
   color: rgb(74 222 128 / var(--tw-text-opacity));
@@ -1116,10 +1120,6 @@ video {
 .text-purple-400 {
   --tw-text-opacity: 1;
   color: rgb(192 132 252 / var(--tw-text-opacity));
-}
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .text-gray-900 {
   --tw-text-opacity: 1;
@@ -1483,11 +1483,6 @@ ol {
   color: rgb(254 202 202 / var(--tw-text-opacity));
 }
 
-.hover\:text-purple-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(216 180 254 / var(--tw-text-opacity));
-}
-
 .hover\:text-green-700:hover {
   --tw-text-opacity: 1;
   color: rgb(21 128 61 / var(--tw-text-opacity));
@@ -1558,12 +1553,22 @@ ol {
     bottom: 0px;
   }
 
+  .md\:m-0 {
+    margin: 0px;
+  }
+
   .md\:m-4 {
     margin: 1rem;
   }
 
-  .md\:m-0 {
-    margin: 0px;
+  .md\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .md\:mx-1 {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
   }
 
   .md\:mx-auto {
@@ -1616,12 +1621,12 @@ ol {
     width: 100%;
   }
 
-  .md\:w-1\/3 {
-    width: 33.333333%;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-1\/3 {
+    width: 33.333333%;
   }
 
   .md\:w-36 {
@@ -1692,6 +1697,11 @@ ol {
     line-height: 1.5rem;
   }
 
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1705,11 +1715,6 @@ ol {
   .md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 }
 
