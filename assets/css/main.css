@@ -504,6 +504,9 @@ video {
 .m-3 {
   margin: 0.75rem;
 }
+.m-4 {
+  margin: 1rem;
+}
 .-m-2 {
   margin: -0.5rem;
 }
@@ -566,17 +569,17 @@ video {
 .mt-4 {
   margin-top: 1rem;
 }
-.-mt-3 {
-  margin-top: -0.75rem;
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 .-mt-14 {
   margin-top: -3.5rem;
 }
+.-mt-3 {
+  margin-top: -0.75rem;
+}
 .ml-0 {
   margin-left: 0px;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 .ml-auto {
   margin-left: auto;
@@ -707,6 +710,9 @@ video {
 .resize {
   resize: both;
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -739,6 +745,9 @@ video {
 }
 .justify-around {
   justify-content: space-around;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .gap-1 {
   gap: 0.25rem;
@@ -1053,13 +1062,13 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .text-xs {
   font-size: 0.75rem;
@@ -1483,6 +1492,11 @@ ol {
   color: rgb(254 202 202 / var(--tw-text-opacity));
 }
 
+.hover\:text-fuchsia-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(240 171 252 / var(--tw-text-opacity));
+}
+
 .hover\:text-green-700:hover {
   --tw-text-opacity: 1;
   color: rgb(21 128 61 / var(--tw-text-opacity));
@@ -1527,6 +1541,10 @@ ol {
 
   .sm\:mt-auto {
     margin-top: auto;
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
@@ -1637,6 +1655,10 @@ ol {
     width: 10rem;
   }
 
+  .md\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -1692,14 +1714,14 @@ ol {
     line-height: 1.75rem;
   }
 
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:text-4xl {
@@ -1792,6 +1814,11 @@ ol {
 
   .lg\:pt-1 {
     padding-top: 0.25rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
