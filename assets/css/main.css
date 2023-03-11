@@ -1036,11 +1036,11 @@ video {
 .text-justify {
   text-align: justify;
 }
-.indent-3 {
-  text-indent: 0.75rem;
-}
 .indent-5 {
   text-indent: 1.25rem;
+}
+.indent-3 {
+  text-indent: 0.75rem;
 }
 .text-2xl {
   font-size: 1.5rem;
