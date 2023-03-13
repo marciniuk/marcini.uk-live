@@ -1074,6 +1074,9 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.italic {
+  font-style: italic;
+}
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
@@ -1166,7 +1169,6 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-
 .max-h-75p {
   max-height: 75%;
 }
@@ -1186,24 +1188,24 @@ video {
 /* Style the header: fixed position (always stay at the top) */
 /* .header { */
 /*   position: fixed; */
-  /* top: 0; */
-  /* z-index: 1; */
-  /* width: 100%; */
-  /* background-color: #f1f1f1; */
+/* top: 0; */
+/* z-index: 1; */
+/* width: 100%; */
+/* background-color: #f1f1f1; */
 /* } */
 
 /* The progress container (grey background) */
 /* .progress-container { */
 /*   width: 100%; */
-  /* height: 8px; */
-  /* background: #22262e; */
+/* height: 8px; */
+/* background: #22262e; */
 /* } */
 
 /* The progress bar (scroll indicator) */
 /* .progress-bar { */
 /*   height: 8px; */
-  /* background: #2c3552; */
-  /* width: 0%; */
+/* background: #2c3552; */
+/* width: 0%; */
 /* } */
 
 .active {
@@ -1268,7 +1270,7 @@ ol {
   height: 95vh;
   width: 16rem;
   margin-right: auto;
-  background-image: linear-gradient(#181b21, #22262E);
+  background-image: linear-gradient(#181b21, #22262e);
   font-size: 1.35rem;
 }
 
@@ -1280,7 +1282,7 @@ ol {
     margin-top: 0px;
     height: 100vh !important;
     margin-right: auto;
-    background: #22262E;
+    background: #22262e;
     font-size: 1.25rem;
   }
 }
@@ -1298,7 +1300,7 @@ ol {
     margin-top: 0px;
     height: 88vh;
     margin-right: auto;
-    background: #22262E;
+    background: #22262e;
     font-size: 1.25rem;
   }
 }
@@ -1452,96 +1454,98 @@ ol {
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 0.75rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(75 85 99);
+  border-radius: 0.75rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(55 65 81);
+}
 .hover\:bg-teal-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
-
 .hover\:bg-teal-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 118 110 / var(--tw-bg-opacity));
 }
-
 .hover\:bg-teal-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(19 78 74 / var(--tw-bg-opacity));
 }
-
 .hover\:text-blue-200:hover {
   --tw-text-opacity: 1;
   color: rgb(191 219 254 / var(--tw-text-opacity));
 }
-
 .hover\:text-green-200:hover {
   --tw-text-opacity: 1;
   color: rgb(187 247 208 / var(--tw-text-opacity));
 }
-
 .hover\:text-yellow-100:hover {
   --tw-text-opacity: 1;
   color: rgb(254 249 195 / var(--tw-text-opacity));
 }
-
 .hover\:text-indigo-300:hover {
   --tw-text-opacity: 1;
   color: rgb(165 180 252 / var(--tw-text-opacity));
 }
-
 .hover\:text-red-200:hover {
   --tw-text-opacity: 1;
   color: rgb(254 202 202 / var(--tw-text-opacity));
 }
-
 .hover\:text-fuchsia-300:hover {
   --tw-text-opacity: 1;
   color: rgb(240 171 252 / var(--tw-text-opacity));
 }
-
 .hover\:text-purple-300:hover {
   --tw-text-opacity: 1;
   color: rgb(216 180 254 / var(--tw-text-opacity));
 }
-
 .hover\:text-green-700:hover {
   --tw-text-opacity: 1;
   color: rgb(21 128 61 / var(--tw-text-opacity));
 }
-
 .hover\:text-blue-700:hover {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
 }
-
 .hover\:text-yellow-600:hover {
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity));
 }
-
 .hover\:text-red-700:hover {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
-
 .hover\:text-purple-700:hover {
   --tw-text-opacity: 1;
   color: rgb(126 34 206 / var(--tw-text-opacity));
 }
-
 .hover\:text-yellow-700:hover {
   --tw-text-opacity: 1;
   color: rgb(161 98 7 / var(--tw-text-opacity));
 }
-
 .hover\:text-blue-800:hover {
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
 }
-
 .hover\:text-purple-800:hover {
   --tw-text-opacity: 1;
   color: rgb(107 33 168 / var(--tw-text-opacity));
 }
-
 @media (min-width: 640px) {
 
   .sm\:mt-auto {
@@ -1565,7 +1569,6 @@ ol {
     line-height: 1.5rem;
   }
 }
-
 @media (min-width: 768px) {
 
   .md\:fixed {
@@ -1744,7 +1747,6 @@ ol {
     line-height: 1rem;
   }
 }
-
 @media (min-width: 1024px) {
 
   .lg\:fixed {
@@ -1826,7 +1828,6 @@ ol {
     line-height: 1.75rem;
   }
 }
-
 @media (min-width: 1280px) {
 
   .xl\:top-0 {
