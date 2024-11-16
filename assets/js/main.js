@@ -204,7 +204,7 @@ document.getElementById("year").innerHTML = new Date().getFullYear();
 
 // Mapowanie ocen na odpowiednią klasę HTML
 const ocenyMap = {
-  o10: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></div>',
+  o10: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i></div>',
   o9: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i></div>',
   o8: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
   o7: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
