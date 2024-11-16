@@ -28,22 +28,42 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+// Funkcja sleep, która pozwala na opóźnienia w kodzie
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Pętla do obracania elementu
 document.querySelectorAll(".loading").forEach(async (element) => {
   let rotate = 180;
+  let loaded = false; // Zmienna kontrolująca, kiedy zakończyć obracanie
+
+  // Upewnij się, że zmienna 'loaded' jest ustawiona na true, kiedy załadowano
+  // Możesz ustawić ją np. na podstawie jakiegoś zdarzenia lub warunku na stronie
+  // Przykład:
+  // loaded = true; // Kiedy dane są załadowane, ustawiamy na true
+
   do {
-    element.style.transform = rotate(${rotate}deg);
-    await sleep(1200);
-    rotate += 180;
-  } while (loaded !== true);
+    // Ustawienie transformacji na elementach, obracając go o 180 stopni
+    element.style.transform = `rotate(${rotate}deg)`;
+    await sleep(1200); // Czekamy 1,2 sekundy
+    rotate += 180; // Zwiększamy kąt obrotu
+  } while (!loaded); // Pętla działa, dopóki 'loaded' jest fałszywe
+
+  // Kiedy załadowano, ukrywamy animację ładowania i pokazujemy załadowane elementy
   document.querySelector(".loading-container").style.display = "none";
-  document.querySelectorAll(".loaded").forEach((element) => {
-    element.style.display = "flex";
+  document.querySelectorAll(".loaded").forEach((el) => {
+    el.style.display = "flex";
   });
-  await sleep(1800);
-  document.querySelectorAll(".loaded").forEach((element) => {
-    element.style.display = "none";
+
+  await sleep(1800); // Czekamy, aż załadowane elementy się pojawią
+
+  // Ukrywamy załadowane elementy
+  document.querySelectorAll(".loaded").forEach((el) => {
+    el.style.display = "none";
   });
 });
+
 
 if (window.location.pathname === "/en/") {
   let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
@@ -157,7 +177,7 @@ if (window.location.pathname.startsWith("/pl")) {
     if (timerElement) {
       // Aktualizacja odliczania
       if (t >= 0) {
-        timerElement.innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
+        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
       } else {
         clearInterval(x);
         timerElement.innerHTML = "*już mam 24, ale zapomniałem zmienić, sorki*";
