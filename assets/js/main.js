@@ -141,20 +141,27 @@ if (window.location.pathname === "/pl/") {
 
 if (window.location.pathname === "/pl/") {
   let deadline = new Date("Aug 3, 2025 23:59:59 GMT+0200").getTime();
+
   let x = setInterval(() => {
     let now = new Date().getTime();
     let t = deadline - now;
-    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7);
+
+    // Obliczanie dni, godzin, minut i sekund
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#wiek").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#wiek").innerHTML =
-        "*już mam 24 ale zapomniałem zmienić, sorki*";
+
+    // Sprawdzamy, czy element istnieje na stronie
+    let timerElement = document.querySelector("#wiek");
+    if (timerElement) {
+      // Aktualizacja odliczania
+      if (t >= 0) {
+        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        clearInterval(x);
+        timerElement.innerHTML = "*już mam 24, ale zapomniałem zmienić, sorki*";
+      }
     }
   }, 1000);
 }
