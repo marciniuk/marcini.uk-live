@@ -1,268 +1,87 @@
-// When the user scrolls the page, execute myFunction
+// Funkcja do odliczania czasu
+function startCountdown(id, deadline) {
+  let deadlineTime = new Date(deadline).getTime();
+  let x = setInterval(() => {
+    let now = new Date().getTime();
+    let t = now - deadlineTime;
+
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+    document.querySelector(`#${id}`).innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+    if (t < 0) {
+      clearInterval(x);
+      document.querySelector(`#${id}`).innerHTML = "*coś się zepsuło*";
+    }
+  }, 1000);
+}
+
+// Funkcja do zamiany ocen
+function replaceRatings(elementId) {
+  const ratings = {
+    o10: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i></div>',
+    o9: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i></div>',
+    o8: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
+    o7: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
+    o6: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
+    o5: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
+    o4: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
+    o3: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
+    o2: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
+    o1: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star-half-stroke p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
+    o0: '<div class="flex flex-row text-amber-500"><i class="fa-regular fa-star p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
+    oS: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-heart p-1"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i></div>',
+  };
+
+  let str = document.getElementById(elementId).innerHTML;
+  for (let key in ratings) {
+    str = str.replace(new RegExp(key, "g"), ratings[key]);
+  }
+  document.getElementById(elementId).innerHTML = str;
+}
+
+// Funkcja do obsługi scrolla
 window.onscroll = function () {
-  myFunction();
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
+    document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
 };
 
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-
-let loaded = false;
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = "100%";
-    }
-  });
-}
-
-document.querySelectorAll(".loading").forEach(async (element) => {
+// Funkcja do animacji ładowania
+async function loadingAnimation() {
   let rotate = 180;
   do {
-    element.style.transform = `rotate(${rotate}deg)`;
+    document.querySelector(".loading").style.transform = `rotate(${rotate}deg)`;
     await sleep(1200);
     rotate += 180;
-  } while (loaded !== true);
+  } while (!loaded);
+
   document.querySelector(".loading-container").style.display = "none";
   document.querySelectorAll(".loaded").forEach((element) => {
     element.style.display = "flex";
   });
+
   await sleep(1800);
   document.querySelectorAll(".loaded").forEach((element) => {
     element.style.display = "none";
   });
-});
-
-if (window.location.pathname === "/en/") {
-  let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = now - deadline;
-    let days = Math.floor(t / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#web-dev").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#web-dev").innerHTML = "*coś się zepsuło*";
-    }
-  }, 1000);
 }
 
-if (window.location.pathname === "/en/") {
-  let deadline = new Date("Oct 2, 2018 16:37:24 GMT+0200").getTime();
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = now - deadline;
-    let days = Math.floor(t / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#linux").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#linux").innerHTML = "*coś się zepsuło*";
-    }
-  }, 1000);
+// Funkcja do spania
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-if (window.location.pathname === "/en/") {
-  let deadline = new Date("Aug 3, 2025 23:59:59 GMT+0200").getTime();
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = deadline - now;
-    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#wiek").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#wiek").innerHTML =
-        "*już mam 24 ale zapomniałem zmienić, sorki*";
-    }
-  }, 1000);
-}
-
+// Uruchomienie odliczeń na podstawie ścieżki URL
 if (window.location.pathname.startsWith("/pl")) {
-  let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = now - deadline;
-    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#web-dev").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#web-dev").innerHTML = "*coś się zepsuło*";
-    }
-  }, 1000);
-}
-
-if (window.location.pathname.startsWith("/pl")) {
-  let deadline = new Date("Oct 2, 2018 16:37:24 GMT+0200").getTime();
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = now - deadline;
-    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#linux").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#linux").innerHTML = "*coś się zepsuło*";
-    }
-  }, 1000);
-}
-
-if (window.location.pathname.startsWith("/pl")) {
-  let deadline = new Date("Aug 3, 2025 23:59:59 GMT+0200").getTime();
-
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = deadline - now;
-
-    // Obliczanie dni, godzin, minut i sekund
-    let days = Math.floor(t / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-
-    // Sprawdzamy, czy element istnieje na stronie
-    let timerElement = document.querySelector("#wiek");
-    if (timerElement) {
-      // Aktualizacja odliczania
-      if (t >= 0) {
-        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-      } else {
-        clearInterval(x);
-        timerElement.innerHTML = "*już mam 24, ale zapomniałem zmienić, sorki*";
-      }
-    }
-  }, 1000);
-}
-
-function toggleNav() {
-  navRight = document.querySelector("#nav-right");
-  if (navRight.className.includes("nav-hidden")) {
-    navRight.classList.remove("nav-hidden");
-    navRight.classList.add("nav-down");
-    navRight.classList.remove("nav-up");
-  } else {
-    navRight.classList.add("nav-hidden");
-    navRight.classList.add("nav-up");
-    navRight.classList.remove("nav-down");
-  }
-}
-document.querySelector("#hamburger").addEventListener("click", toggleNav);
-
-document.getElementById("year").innerHTML = new Date().getFullYear();
-
-let str10 = document.getElementById("Oceny").innerHTML;
-let res10 = str10.replace(
-  /o10/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res10;
-
-let str9 = document.getElementById("Oceny").innerHTML;
-let res9 = str9.replace(
-  /o9/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res9;
-
-let str8 = document.getElementById("Oceny").innerHTML;
-let res8 = str8.replace(
-  /o8/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res8;
-
-let str7 = document.getElementById("Oceny").innerHTML;
-let res7 = str7.replace(
-  /o7/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res7;
-
-let str6 = document.getElementById("Oceny").innerHTML;
-let res6 = str6.replace(
-  /o6/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res6;
-
-let str5 = document.getElementById("Oceny").innerHTML;
-let res5 = str5.replace(
-  /o5/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res5;
-
-let str4 = document.getElementById("Oceny").innerHTML;
-let res4 = str4.replace(
-  /o4/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res4;
-
-let str3 = document.getElementById("Oceny").innerHTML;
-let res3 = str3.replace(
-  /o3/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-solid fa-star-half-stroke p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res3;
-
-let str2 = document.getElementById("Oceny").innerHTML;
-let res2 = str2.replace(
-  /o2/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res2;
-
-let str1 = document.getElementById("Oceny").innerHTML;
-let res1 = str1.replace(
-  /o1/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star-half-stroke p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res1;
-
-let str0 = document.getElementById("Oceny").innerHTML;
-let res0 = str0.replace(
-  /o0/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-regular fa-star p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = res0;
-
-let strS = document.getElementById("Oceny").innerHTML;
-let resS = strS.replace(
-  /oS/g,
-  '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-heart p-1"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i></div>'
-);
-document.getElementById("Oceny").innerHTML = resS;
-
+  startCountdown("web-dev", "Dec 17, 2019 16:36:39 GMT+0200");
+  startCountdown("linux", "Oct 2, 2018 16:37:24 GMT+0200");
+  startCountdown("wiek", "Aug 3, 2025 23:59:59 GMT+0200");
+} else if (window.location.pathname === "/en/") {
+  startCountdown("web-dev", "Dec 17, 2019 16:36:39 GMT+0200
