@@ -16,12 +16,33 @@
     <meta property="og:title" content="Adrian Marciniuk" />
 
     <!-- Favicon i konfiguracja aplikacji -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#CCCCCC" />
-    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml" />
+    <link
+      rel="mask-icon"
+      href="/assets/favicon/safari-pinned-tab.svg"
+      color="#CCCCCC"
+    />
+    <meta
+      name="msapplication-config"
+      content="/assets/favicon/browserconfig.xml"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
@@ -51,30 +72,56 @@
         <div class="px-6 mx-auto lg:mr-64 lg:ml-auto flex flex-col">
           <div class="flex justify-between items-center">
             <a class="flex items-center lg:mb-0" href="/pl/">
-              <img class="w-12 lg:w-16" src="/assets/img/logo.png" alt="Marcini.uk Logo" />
+              <img
+                class="w-12 lg:w-16"
+                src="/assets/img/logo.png"
+                alt="Marcini.uk Logo"
+              />
               <b class="text-2xl md:text-3xl text-white">Marcini.uk</b>
             </a>
             <div id="hamburger" class="fas fa-bars fa-lg text-gray-200"></div>
           </div>
 
           <div class="lg:fixed right-0 xl:top-0">
-            <div id="nav-right" class="nav-hidden sidebar truncate flex flex-col -mx-2 mt-2 xl:top-0 text-gray-200">
-              <a class="mx-2 my-1 text-2xl hover:text-blue-200" href="/pl/profile/">
+            <div
+              id="nav-right"
+              class="nav-hidden sidebar truncate flex flex-col -mx-2 mt-2 xl:top-0 text-gray-200"
+            >
+              <a
+                class="mx-2 my-1 text-2xl hover:text-blue-200"
+                href="/pl/profile/"
+              >
                 <i class="fas fa-address-card w-8 text-center"></i> Profile
               </a>
-              <a class="mx-2 my-1 text-2xl hover:text-green-200" href="/pl/projekty/">
+              <a
+                class="mx-2 my-1 text-2xl hover:text-green-200"
+                href="/pl/projekty/"
+              >
                 <i class="fas fa-project-diagram w-8 text-center"></i> Projekty
               </a>
-              <a class="mx-2 my-1 text-2xl hover:text-yellow-100" href="/pl/setup/">
+              <a
+                class="mx-2 my-1 text-2xl hover:text-yellow-100"
+                href="/pl/setup/"
+              >
                 <i class="fas fa-laptop-code w-8 text-center"></i> Setup
               </a>
-              <a class="mx-2 my-1 text-2xl hover:text-indigo-300" href="/pl/kontakt/">
-                <i class="fas fa-envelope-open-text w-8 text-center"></i> Kontakt
+              <a
+                class="mx-2 my-1 text-2xl hover:text-indigo-300"
+                href="/pl/kontakt/"
+              >
+                <i class="fas fa-envelope-open-text w-8 text-center"></i>
+                Kontakt
               </a>
-              <a class="mx-2 my-1 text-2xl hover:text-red-200" href="/pl/ulubiency">
+              <a
+                class="mx-2 my-1 text-2xl hover:text-red-200"
+                href="/pl/ulubiency"
+              >
                 <i class="fas fa-heart w-8 text-center"></i> Ulubieńcy
               </a>
-              <a class="mx-2 my-1 text-2xl hover:text-fuchsia-300" href="/pl/ksiazki">
+              <a
+                class="mx-2 my-1 text-2xl hover:text-fuchsia-300"
+                href="/pl/ksiazki"
+              >
                 <i class="fa-solid fa-book w-8 text-center"></i> Książki
               </a>
             </div>
@@ -94,7 +141,9 @@
                 <div class="bg-blue-600 rounded-t-lg bold p-3 pl-4 text-2xl">
                   <i class="fab fa-telegram-plane"></i> Telegram
                 </div>
-                <div class="bg-gray-700 rounded-b-lg p-3 text-right pr-4 text-xl">
+                <div
+                  class="bg-gray-700 rounded-b-lg p-3 text-right pr-4 text-xl"
+                >
                   @AdrianMarciniuk
                 </div>
               </a>
@@ -105,7 +154,9 @@
                 <div class="bg-green-600 rounded-t-lg bold p-3 pl-4 text-2xl">
                   <i class="fas fa-at"></i> Email
                 </div>
-                <div class="bg-gray-700 rounded-b-lg p-3 text-right pr-4 text-xl">
+                <div
+                  class="bg-gray-700 rounded-b-lg p-3 text-right pr-4 text-xl"
+                >
                   kontakt@marcini.uk
                 </div>
               </a>
@@ -114,38 +165,76 @@
         </div>
 
         <!-- Formularz kontaktowy -->
-        <form action="https://api.staticforms.xyz/submit" method="POST" onsubmit="return submitForm();" class="mt-5 w-80 flex m-auto text-lg md:text-xl">
+        <form
+          action="https://api.staticforms.xyz/submit"
+          method="POST"
+          onsubmit="return submitForm();"
+          class="mt-5 w-80 flex m-auto text-lg md:text-xl"
+        >
           <div class="flex flex-col items-center w-72 mx-auto">
-            <input type="hidden" name="accessKey" value="a569f81d-9677-4413-9a34-72379721597d" />
+            <input
+              type="hidden"
+              name="accessKey"
+              value="a569f81d-9677-4413-9a34-72379721597d"
+            />
             <input type="hidden" name="subject" value="Kontakt PL" />
 
             <label class="my-2 flex flex-col w-full">
               <span><i class="fas fa-id-card"></i> Imię / nick:</span>
-              <input class="bg-gray-700 px-2 py-1 mt-1 rounded-md" type="text" name="$Nazwa" required />
+              <input
+                class="bg-gray-700 px-2 py-1 mt-1 rounded-md"
+                type="text"
+                name="$Nazwa"
+                required
+              />
             </label>
 
             <label class="my-2 flex flex-col w-full">
               <span><i class="fas fa-at"></i> E-mail:</span>
-              <input class="bg-gray-700 px-2 py-1 mt-1 rounded-md" type="email" name="Email" required />
+              <input
+                class="bg-gray-700 px-2 py-1 mt-1 rounded-md"
+                type="email"
+                name="Email"
+                required
+              />
             </label>
 
             <label class="my-2 flex flex-col w-full">
               <span><i class="fas fa-comments"></i> Wiadomość:</span>
-              <textarea class="bg-gray-700 px-2 py-1 h-32 mt-1 rounded-md" name="$Wiadomość" required></textarea>
+              <textarea
+                class="bg-gray-700 px-2 py-1 h-32 mt-1 rounded-md"
+                name="$Wiadomość"
+                required
+              ></textarea>
             </label>
 
-            <input type="hidden" name="redirectTo" value="https://marcini.uk/pl/kontakt" />
+            <input
+              type="hidden"
+              name="redirectTo"
+              value="https://marcini.uk/pl/kontakt"
+            />
             <input type="text" name="honeypot" style="display: none" />
-            <input class="btn btn-blue mt-4 w-full" type="submit" value="Wyślij" />
+            <input
+              class="btn btn-blue mt-4 w-full"
+              type="submit"
+              value="Wyślij"
+            />
           </div>
         </form>
       </div>
     </div>
 
     <!-- Stopka -->
-    <footer class="bg-gray-700 text-gray-300 mt-auto md:fixed w-full md:bottom-0 z-40">
-      <div class="flex flex-col sm:flex-row sm:justify-around items-center px-5 py-4 lg:mr-64">
-        <div>2019-<span id="year"></span> <span class="far fa-copyright"></span> Adrian Marciniuk</div>
+    <footer
+      class="bg-gray-700 text-gray-300 mt-auto md:fixed w-full md:bottom-0 z-40"
+    >
+      <div
+        class="flex flex-col sm:flex-row sm:justify-around items-center px-5 py-4 lg:mr-64"
+      >
+        <div>
+          2019-<span id="year"></span>
+          <span class="far fa-copyright"></span> Adrian Marciniuk
+        </div>
         <a href="/pl/polityka-prywatnosci">
           <span class="fas fa-user-secret"></span> Polityka Prywatności
         </a>
@@ -153,7 +242,9 @@
     </footer>
 
     <script async defer src="https://api.marcini.uk/latest.js"></script>
-    <noscript><img src="https://api.marcini.uk/noscript.gif" alt="" /></noscript>
+    <noscript
+      ><img src="https://api.marcini.uk/noscript.gif" alt=""
+    /></noscript>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

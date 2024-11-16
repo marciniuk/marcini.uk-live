@@ -30,7 +30,7 @@ for (i = 0; i < coll.length; i++) {
 
 // Funkcja sleep, która pozwala na opóźnienia w kodzie
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 // Pętla do obracania elementu
@@ -63,7 +63,6 @@ document.querySelectorAll(".loading").forEach(async (element) => {
     el.style.display = "none";
   });
 });
-
 
 if (window.location.pathname === "/en/") {
   let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
@@ -215,7 +214,7 @@ const ocenyMap = {
   o2: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
   o1: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-star-half-stroke p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
   o0: '<div class="flex flex-row text-amber-500"><i class="fa-regular fa-star p-1"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i><i class="fa-regular fa-star p-1 pl-0"></i></div>',
-  oS: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-heart p-1"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i></div>'
+  oS: '<div class="flex flex-row text-amber-500"><i class="fa-solid fa-heart p-1"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i><i class="fa-solid fa-heart p-1 pl-0"></i></div>',
 };
 
 // Funkcja do zastąpienia ocen na gwiazdki
@@ -224,7 +223,7 @@ function zamienOceny() {
 
   // Zastępujemy każdą ocenę na odpowiednią wersję HTML z mapy
   for (let ocena in ocenyMap) {
-    let regex = new RegExp(ocena, 'g');
+    let regex = new RegExp(ocena, "g");
     str = str.replace(regex, ocenyMap[ocena]);
   }
 

@@ -5,26 +5,47 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Adrian Marciniuk</title>
-    
+
     <!-- Linki do stylów -->
     <link href="/assets/css/fontawesome.css" rel="stylesheet" />
     <link href="/assets/css/main.css" rel="stylesheet" />
-    
+
     <!-- Meta dane Open Graph -->
     <meta property="og:image" content="/assets/img/logo.png" />
     <meta property="og:description" content="¯\_(ツ)_/¯" />
     <meta property="og:title" content="Adrian Marciniuk" />
-    
+
     <!-- Favicon i inne ikony -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#CCCCCC" />
-    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml" />
+    <link
+      rel="mask-icon"
+      href="/assets/favicon/safari-pinned-tab.svg"
+      color="#CCCCCC"
+    />
+    <meta
+      name="msapplication-config"
+      content="/assets/favicon/browserconfig.xml"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-  
+
     <!-- SEO Jekyll -->
     <meta name="generator" content="Jekyll v4.3.2" />
     <meta property="og:locale" content="en_US" />
@@ -34,7 +55,7 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="Adrian Marciniuk" />
-    
+
     <!-- Structured data JSON-LD -->
     <script type="application/ld+json">
       {
@@ -46,7 +67,10 @@
     </script>
   </head>
 
-  <body class="bg-gray-900 text-gray-100 flex flex-col min-h-full" onload="loaded=true">
+  <body
+    class="bg-gray-900 text-gray-100 flex flex-col min-h-full"
+    onload="loaded=true"
+  >
     <div>
       <!-- Nawigacja -->
       <div class="sticky top-0 flex w-full z-10">
@@ -54,31 +78,58 @@
           <div class="px-6 mx-auto lg:mr-64 lg:ml-auto flex flex-col">
             <div class="flex justify-between items-center">
               <a class="flex items-center lg:mb-0" href="/pl/">
-                <img class="w-12 lg:w-16" src="/assets/img/logo.png" alt="Logo" />
+                <img
+                  class="w-12 lg:w-16"
+                  src="/assets/img/logo.png"
+                  alt="Logo"
+                />
                 <b class="text-2xl md:text-3xl text-white">Marcini.uk</b>
               </a>
               <div id="hamburger" class="fas fa-bars fa-lg text-gray-200"></div>
             </div>
-            
+
             <!-- Nawigacja boczna -->
             <div class="lg:fixed right-0 xl:top-0">
-              <div id="nav-right" class="nav-hidden sidebar truncate flex flex-col -mx-2 mt-2 xl:top-0 text-gray-200">
-                <a class="mx-2 my-1 text-2xl hover:text-blue-200" href="/pl/profile/">
+              <div
+                id="nav-right"
+                class="nav-hidden sidebar truncate flex flex-col -mx-2 mt-2 xl:top-0 text-gray-200"
+              >
+                <a
+                  class="mx-2 my-1 text-2xl hover:text-blue-200"
+                  href="/pl/profile/"
+                >
                   <i class="fas fa-address-card w-8 text-center"></i> Profile
                 </a>
-                <a class="mx-2 my-1 text-2xl hover:text-green-200" href="/pl/projekty/">
-                  <i class="fas fa-project-diagram w-8 text-center"></i> Projekty
+                <a
+                  class="mx-2 my-1 text-2xl hover:text-green-200"
+                  href="/pl/projekty/"
+                >
+                  <i class="fas fa-project-diagram w-8 text-center"></i>
+                  Projekty
                 </a>
-                <a class="mx-2 my-1 text-2xl hover:text-yellow-100" href="/pl/setup/">
+                <a
+                  class="mx-2 my-1 text-2xl hover:text-yellow-100"
+                  href="/pl/setup/"
+                >
                   <i class="fas fa-laptop-code w-8 text-center"></i> Setup
                 </a>
-                <a class="mx-2 my-1 text-2xl hover:text-indigo-300" href="/pl/kontakt/">
-                  <i class="fas fa-envelope-open-text w-8 text-center"></i> Kontakt
+                <a
+                  class="mx-2 my-1 text-2xl hover:text-indigo-300"
+                  href="/pl/kontakt/"
+                >
+                  <i class="fas fa-envelope-open-text w-8 text-center"></i>
+                  Kontakt
                 </a>
-                <a class="mx-2 my-1 text-2xl hover:text-red-200" href="/pl/ulubiency">
+                <a
+                  class="mx-2 my-1 text-2xl hover:text-red-200"
+                  href="/pl/ulubiency"
+                >
                   <i class="fas fa-heart w-8 text-center"></i> Ulubieńcy
                 </a>
-                <a class="mx-2 my-1 text-2xl hover:text-fuchsia-300" href="/pl/ksiazki">
+                <a
+                  class="mx-2 my-1 text-2xl hover:text-fuchsia-300"
+                  href="/pl/ksiazki"
+                >
                   <i class="fa-solid fa-book w-8 text-center"></i> Książki
                 </a>
               </div>
@@ -86,24 +137,30 @@
           </div>
         </nav>
       </div>
-  
+
       <!-- Treść główna -->
       <div class="lg:mr-64">
         <div class="w-full max-w-6xl px-6 py-8 mx-auto md:mb-12">
           <div class="flex justify-center lg:pr-6 xl:mx-32">
             <div class="flex flex-col lg:flex-row">
-              
               <!-- Sekcja o mnie -->
               <section class="lg:p-6 lg:pl-0 lg:pt-1">
-                <div class="m-2 lg:w-64 lg:ml-0 lg:mt-0 p-2 mb-4 rounded-2xl items-center object-cover object-center" style="background-image: url('/assets/img/bg.jpg')">
-                  <img src="/assets/img/logo.jpg" class="rounded-full mx-auto w-40 lg:w-48 p-2" alt="Adrian Marciniuk" />
-  
+                <div
+                  class="m-2 lg:w-64 lg:ml-0 lg:mt-0 p-2 mb-4 rounded-2xl items-center object-cover object-center"
+                  style="background-image: url('/assets/img/bg.jpg')"
+                >
+                  <img
+                    src="/assets/img/logo.jpg"
+                    class="rounded-full mx-auto w-40 lg:w-48 p-2"
+                    alt="Adrian Marciniuk"
+                  />
+
                   <div class="flex flex-col items-center">
                     <div class="text-2xl pt-2 font-bold">Adrian Marciniuk</div>
                     <div class="text-lg -mt-2 pb-2">
                       <i class="fas fa-envelope"></i> adrian@marcini.uk
                     </div>
-  
+
                     <div class="flex flex-row justify-around p-2 mx-6 w-8/12">
                       <a href="https://gitlab.com/marciniuk" class="text-3xl">
                         <i class="fab fa-gitlab"></i>
@@ -115,54 +172,85 @@
                   </div>
                 </div>
               </section>
-  
+
               <!-- Sekcja tekstowa -->
-              <section class="lg:p-6 lg:pt-1 mt-3 lg:mt-0 lg:bg-gray-700 rounded-lg">
+              <section
+                class="lg:p-6 lg:pt-1 mt-3 lg:mt-0 lg:bg-gray-700 rounded-lg"
+              >
                 <div class="lg:mt-3">
                   Cześć! Mam na imię Adrian, mam 23 lata (jeszcze przez
-                  <span id="wiek" class="font-bold text-blue-300"></span>) oraz pochodzę z Polski, a dokładniej 
-                  z małego miasteczka w Wielkopolsce. Choć aktualnie mieszkam nad morzem 😎
+                  <span id="wiek" class="font-bold text-blue-300"></span>) oraz
+                  pochodzę z Polski, a dokładniej z małego miasteczka w
+                  Wielkopolsce. Choć aktualnie mieszkam nad morzem 😎
                 </div>
-  
+
                 <div class="mt-3">
-                  Do "informatyki" zaraził mnie nauczyciel "przyrki" w podstawówce. Linux'a (btw I use Arch Linux! 🐧) używam już przez
-                  <span id="linux" class="font-bold text-blue-300"></span>, a w web dev "pół profesjonalnie" bawię się
+                  Do "informatyki" zaraził mnie nauczyciel "przyrki" w
+                  podstawówce. Linux'a (btw I use Arch Linux! 🐧) używam już
+                  przez
+                  <span id="linux" class="font-bold text-blue-300"></span>, a w
+                  web dev "pół profesjonalnie" bawię się
                   <span id="web-dev" class="font-bold text-blue-300"></span>.
                 </div>
-  
+
                 <div class="mt-3">
-                  W wolnych chwilach czytam (głównie fantastykę), oglądam (wszystko jak leci), czasem też gram (arcydzieła, które polecam, są w zakładce
-                  <a class="font-bold text-blue-300 hover:text-blue-400" href="/pl/ulubiency"><i class="fas fa-link"></i> Ulubieńcy</a>, choć dawno nie 
-                  była aktualizowana 😅). Na co dzień używam ThinkPad'a T450 (w sumie to już HP EliteBook 845 G8, ostatnio zaktualizowałem setup, trzeba 
-                  teraz zaktualizować stronę xD), Szajsunga S20FE oraz słuchawek Sony (więcej info w zakładce
-                  <a class="font-bold text-blue-300 hover:text-blue-400" href="/pl/setup"><i class="fas fa-link"></i> Setup</a>).
+                  W wolnych chwilach czytam (głównie fantastykę), oglądam
+                  (wszystko jak leci), czasem też gram (arcydzieła, które
+                  polecam, są w zakładce
+                  <a
+                    class="font-bold text-blue-300 hover:text-blue-400"
+                    href="/pl/ulubiency"
+                    ><i class="fas fa-link"></i> Ulubieńcy</a
+                  >, choć dawno nie była aktualizowana 😅). Na co dzień używam
+                  ThinkPad'a T450 (w sumie to już HP EliteBook 845 G8, ostatnio
+                  zaktualizowałem setup, trzeba teraz zaktualizować stronę xD),
+                  Szajsunga S20FE oraz słuchawek Sony (więcej info w zakładce
+                  <a
+                    class="font-bold text-blue-300 hover:text-blue-400"
+                    href="/pl/setup"
+                    ><i class="fas fa-link"></i> Setup</a
+                  >).
                 </div>
-  
+
                 <div class="mt-3">
-                  W tym miejscu chciałbym Ci podziękować. Prawdopodobnie jesteś jedyną osobą, która to dokończy czytać. Naprawdę to doceniam! Jeśli chcesz 
-                  kontynuować sprawdzanie moich wypocin, to zapraszam do dalszej części strony, wierzę, że nie będziesz żałować! 👌😁
+                  W tym miejscu chciałbym Ci podziękować. Prawdopodobnie jesteś
+                  jedyną osobą, która to dokończy czytać. Naprawdę to doceniam!
+                  Jeśli chcesz kontynuować sprawdzanie moich wypocin, to
+                  zapraszam do dalszej części strony, wierzę, że nie będziesz
+                  żałować! 👌😁
                 </div>
               </section>
             </div>
           </div>
         </div>
       </div>
-  
+
       <!-- Stopka -->
-      <footer class="bg-gray-700 text-gray-300 mt-auto md:fixed w-full md:bottom-0 z-40">
-        <div class="flex flex-col sm:flex-row sm:justify-around items-center px-5 py-4 lg:mr-64">
-          <div>2019-<span id="year"></span> <span class="far fa-copyright"></span> Adrian Marciniuk</div>
-          <a href="/pl/polityka-prywatnosci" class="text-gray-300 hover:text-white">
+      <footer
+        class="bg-gray-700 text-gray-300 mt-auto md:fixed w-full md:bottom-0 z-40"
+      >
+        <div
+          class="flex flex-col sm:flex-row sm:justify-around items-center px-5 py-4 lg:mr-64"
+        >
+          <div>
+            2019-<span id="year"></span>
+            <span class="far fa-copyright"></span> Adrian Marciniuk
+          </div>
+          <a
+            href="/pl/polityka-prywatnosci"
+            class="text-gray-300 hover:text-white"
+          >
             <span class="fas fa-user-secret"></span> Polityka Prywatności
           </a>
         </div>
       </footer>
-  
     </div>
-  
+
     <!-- Skrypty -->
     <script async defer src="https://api.marcini.uk/latest.js"></script>
-    <noscript><img src="https://api.marcini.uk/noscript.gif" alt="" /></noscript>
+    <noscript
+      ><img src="https://api.marcini.uk/noscript.gif" alt=""
+    /></noscript>
     <script src="/assets/js/main.js"></script>
-  </body>  
+  </body>
 </html>
