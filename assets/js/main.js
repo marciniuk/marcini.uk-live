@@ -101,7 +101,7 @@ if (window.location.pathname === "/en/") {
   }, 1000);
 }
 
-if (window.location.pathname === "/pl/") {
+if (window.location.pathname.startsWith("/pl")) {
   let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
   let x = setInterval(() => {
     let now = new Date().getTime();
@@ -120,7 +120,7 @@ if (window.location.pathname === "/pl/") {
   }, 1000);
 }
 
-if (window.location.pathname === "/pl/") {
+if (window.location.pathname.startsWith("/pl")) {
   let deadline = new Date("Oct 2, 2018 16:37:24 GMT+0200").getTime();
   let x = setInterval(() => {
     let now = new Date().getTime();
@@ -139,7 +139,7 @@ if (window.location.pathname === "/pl/") {
   }, 1000);
 }
 
-if (window.location.pathname === "/pl/") {
+if (window.location.pathname.startsWith("/pl")) {
   let deadline = new Date("Aug 3, 2025 23:59:59 GMT+0200").getTime();
 
   let x = setInterval(() => {
