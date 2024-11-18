@@ -64,96 +64,31 @@ document.querySelectorAll(".loading").forEach(async (element) => {
   });
 });
 
-if (window.location.pathname === "/en/") {
+if (window.location.pathname.startsWith("/pl")) {
   let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
+
   let x = setInterval(() => {
     let now = new Date().getTime();
     let t = now - deadline;
-    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+
+    // Obliczanie tygodni, dni, godzin, minut i sekund
+    let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7)); // Tygodnie
+    let days = Math.floor(
+      (t % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)
+    ); // Pozostałe dni
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#web-dev").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+    // Wyświetlanie wyniku w elemencie o ID #web-dev
+    document.querySelector(
+      "#web-dev"
+    ).innerHTML = `${weeks} tygodni (oraz ${days}d ${hours}h ${minutes}m ${seconds}s)`;
+
+    // Sprawdzenie, czy czas jest ujemny
     if (t < 0) {
       clearInterval(x);
       document.querySelector("#web-dev").innerHTML = "*coś się zepsuło*";
-    }
-  }, 1000);
-}
-
-if (window.location.pathname === "/en/") {
-  let deadline = new Date("Oct 2, 2018 16:37:24 GMT+0200").getTime();
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = now - deadline;
-    let days = Math.floor(t / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#linux").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#linux").innerHTML = "*coś się zepsuło*";
-    }
-  }, 1000);
-}
-
-if (window.location.pathname === "/en/") {
-  let deadline = new Date("Aug 3, 2025 23:59:59 GMT+0200").getTime();
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = deadline - now;
-    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#wiek").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#wiek").innerHTML =
-        "*już mam 24 ale zapomniałem zmienić, sorki*";
-    }
-  }, 1000);
-}
-
-if (window.location.pathname.startsWith("/pl")) {
-  let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = now - deadline;
-    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#web-dev").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#web-dev").innerHTML = "*coś się zepsuło*";
-    }
-  }, 1000);
-}
-
-if (window.location.pathname.startsWith("/pl")) {
-  let deadline = new Date("Oct 2, 2018 16:37:24 GMT+0200").getTime();
-  let x = setInterval(() => {
-    let now = new Date().getTime();
-    let t = now - deadline;
-    //let weeks = Math.floor(t / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.floor(t / (1000 * 60 * 60 * 24)); //- (t / (1000 * 60 * 60 * 24 * 7) * 7));
-    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((t % (1000 * 60)) / 1000);
-    document.querySelector("#linux").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    if (t < 0) {
-      clearInterval(x);
-      document.querySelector("#linux").innerHTML = "*coś się zepsuło*";
     }
   }, 1000);
 }
