@@ -64,13 +64,6 @@ document.querySelectorAll(".loading").forEach(async (element) => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.body.querySelectorAll("p, span, div, h1, h2, h3"); // Wybierz elementy do modyfikacji
-  elements.forEach((el) => {
-    el.innerHTML = el.innerHTML.replace(/\s([aiouwzAIUOWZ])\s/g, " $1&nbsp;");
-  });
-});
-
 if (window.location.pathname.startsWith("/pl")) {
   let deadline = new Date("Dec 17, 2019 16:36:39 GMT+0200").getTime();
 
@@ -174,3 +167,10 @@ function zamienOceny() {
 
 // Wywołaj funkcję, aby zaktualizować stronę
 zamienOceny();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.body.querySelectorAll("p, span, div, h1, h2, h3"); // Wybierz elementy do modyfikacji
+  elements.forEach((el) => {
+    el.innerHTML = el.innerHTML.replace(/\s([aiouwzAIUOWZ])\s/g, " $1&nbsp;");
+  });
+});
