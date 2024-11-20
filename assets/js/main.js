@@ -167,3 +167,12 @@ function zamienOceny() {
 
 // Wywołaj funkcję, aby zaktualizować stronę
 zamienOceny();
+
+document.querySelectorAll(".nowrap-single").forEach(function (element) {
+  let text = element.innerHTML;
+
+  // Rozszerzamy listę słów, które nie mogą łamać linii
+  text = text.replace(/\b(a|i|o|z|w|u|e|na|do)\b\s+/g, "$1&nbsp;");
+
+  element.innerHTML = text;
+});
