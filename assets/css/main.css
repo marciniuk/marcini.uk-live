@@ -1290,7 +1290,7 @@ ol {
     right: 0;
     padding: 20px;
     margin-top: 0px;
-    height: 89vh !important;
+    height: calc(100vh - 50px) !important;
     margin-right: auto;
     background: #161e31;
     font-size: 1.25rem;
