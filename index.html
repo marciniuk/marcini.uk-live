@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Adrian Marciniuk</title>
-  
+
     <!-- Linki do zasobów -->
     <link href="/assets/css/fontawesome.css" rel="stylesheet" />
     <link href="/assets/css/main.css" rel="stylesheet" />
-  
+
     <!-- Open Graph -->
     <meta property="og:title" content="Adrian Marciniuk" />
     <meta property="og:description" content="¯\_(ツ)_/¯" />
@@ -18,20 +18,41 @@
     <meta property="og:url" content="https://marcini.uk/" />
     <meta property="og:site_name" content="Adrian Marciniuk" />
     <meta property="og:type" content="website" />
-  
+
     <!-- Favicon i konfiguracja aplikacji -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#CCCCCC" />
-    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml" />
+    <link
+      rel="mask-icon"
+      href="/assets/favicon/safari-pinned-tab.svg"
+      color="#CCCCCC"
+    />
+    <meta
+      name="msapplication-config"
+      content="/assets/favicon/browserconfig.xml"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-  
+
     <!-- SEO i struktura danych -->
     <link rel="canonical" href="https://marcini.uk/" />
-  
+
     <!-- JSON-LD -->
     <script type="application/ld+json">
       {
@@ -42,25 +63,24 @@
         "url": "https://marcini.uk/"
       }
     </script>
-  </head>  
+  </head>
 
-  <body
-    class="bg-gray-900 text-gray-100 flex flex-col min-h-full"
-    onload="loaded=true"
-  >
-   <div>
+  <body class="bg-gray-900 text-gray-100 flex flex-col min-h-full">
+    <!-- Navigation -->
+    <header class="px-6 mx-auto lg:mr-64 lg:ml-auto flex flex-col">
+      <div class="flex justify-between items-center">
+        <a class="flex items-center lg:mb-0" href="/pl/">
+          <img class="w-12 lg:w-16" src="/assets/img/logo.png" alt="Logo" />
+          <b class="text-2xl md:text-3xl text-white">Marcini.uk</b>
+        </a>
+        <button
+          id="hamburger"
+          class="fas fa-bars fa-lg text-gray-200"
+          aria-label="Menu"
+        ></button>
+      </div>
 
-  <div class="px-6 mx-auto lg:mr-64 lg:ml-auto flex flex-col">
-    <div class="flex justify-between items-center">
-      <a class="flex items-center lg:mb-0" href="/pl/">
-        <img class="w-12 lg:w-16" src="/assets/img/logo.png" />
-        <b class="text-2xl md:text-3xl text-white">Marcini.uk</b>
-      </a>
-      <div id="hamburger" class="fas fa-bars fa-lg text-gray-200"></div>
-    </div>
-
-    <div class="lg:fixed right-0 xl:top-0">
-      <div
+      <nav
         id="nav-right"
         class="nav-hidden sidebar truncate flex flex-col -mx-2 mt-2 xl:top-0 text-gray-200"
       >
@@ -82,71 +102,78 @@
         <a class="mx-2 my-1 text-2xl hover:text-fuchsia-300" href="/pl/ksiazki">
           <i class="fa-solid fa-book w-8 text-center"></i> Książki
         </a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="lg:mr-64">
+      <div class="w-full max-w-6xl px-6 py-8 mx-auto md:mb-12">
+        <div class="z-50 fixed w-full left-0 top-0">
+          <div
+            class="loading-container w-full h-full bg-gray-800 flex justify-center items-center fixed"
+          >
+            <img
+              class="loading h-64"
+              src="/assets/img/loading/logo.svg"
+              alt="Loading"
+            />
+          </div>
+          <div
+            class="loaded hidden w-1/2 h-full bg-gray-800 flex justify-end items-center fixed loading-after"
+          >
+            <img class="h-64" src="/assets/img/loading/left.svg" alt="Loaded" />
+          </div>
+          <div
+            class="loaded hidden w-1/2 h-full bg-gray-800 flex right-0 items-center fixed loading-after"
+          >
+            <img
+              class="h-64"
+              src="/assets/img/loading/right.svg"
+              alt="Loaded"
+            />
+          </div>
+        </div>
+
+        <div class="text-center">
+          Please enable javascript or change browser and now just click this
+          <a class="linki" href="/en/">button</a> ;P
+        </div>
+
+        <script>
+          window.onload = function () {
+            var ln = window.navigator.language || navigator.browserLanguage;
+            if (ln == "pl-PL" || ln == "pl") {
+              window.location.href = "/pl";
+            } else {
+              window.location.href = "/pl";
+            }
+          };
+        </script>
       </div>
-    </div>
-  </div>
-</nav>
+    </main>
 
-      </div>
-      <div class="lg:mr-64">
-        <div class="w-full max-w-6xl px-6 py-8 mx-auto md:mb-12">
-	<div class="z-50 fixed w-full left-0 top-0">
-  <div
-    class="loading-container w-full h-full bg-gray-800 flex justify-center items-center fixed"
-  >
-    <img class="loading h-64" src="/assets/img/loading/logo.svg" />
-  </div>
-  <div
-    class="loaded hidden w-1/2 h-full bg-gray-800 flex justify-end items-center fixed loading-after"
-  >
-    <img class="h-64" src="/assets/img/loading/left.svg" />
-  </div>
-  <div
-    class="loaded hidden w-1/2 h-full bg-gray-800 flex right-0 items-center fixed loading-after"
-  >
-    <img class="h-64" src="/assets/img/loading/right.svg" />
-  </div>
-</div>
-
-<div class="text-center">
-  Please enable javascript or change browser and now just click this
-  <a class="linki" href="/en/">button</a> ;P
-</div>
-
-<script>
-  window.onload = function () {
-    var ln = window.navigator.language || navigator.browserLanguage;
-    if (ln == "pl-PL") {
-      window.location.href = "/pl";
-    } else if (ln == "pl") {
-      window.location.href = "/pl";
-    } else {
-      window.location.href = "/pl";
-    }
-  };
-</script>
-
-
-</div>
-
-      </div>
-    </div>
+    <!-- Footer -->
     <footer
-  class="bg-gray-700 text-gray-300 mt-auto md:fixed w-full md:bottom-0 z-40"
->
-  <div
-    class="flex flex-col sm:flex-row sm:justify-around items-center px-5 py-4 lg:mr-64"
-  >
-  <div>2019-<span id="year"></span> <span class="far fa-copyright"></span> Adrian Marciniuk</div>
-    <a href="/pl/polityka-prywatnosci"
-      ><span class="fas fa-user-secret"></span> Polityka Prywatności</a
+      class="bg-gray-700 text-gray-300 mt-auto md:fixed w-full md:bottom-0 z-40"
     >
-  </div>
-</footer>
-<script async defer src="https://api.marcini.uk/latest.js"></script>
-<noscript><img src="https://api.marcini.uk/noscript.gif" alt="" /></noscript>
+      <div
+        class="flex flex-col sm:flex-row sm:justify-around items-center px-5 py-4 lg:mr-64"
+      >
+        <div>
+          2019-<span id="year"></span>
+          <span class="far fa-copyright"></span> Adrian Marciniuk
+        </div>
+        <a href="/pl/polityka-prywatnosci"
+          ><span class="fas fa-user-secret"></span> Polityka Prywatności</a
+        >
+      </div>
+    </footer>
 
-    <script src="/assets/js/main.js"></script>
-
+    <!-- Scripts -->
+    <script async defer src="https://api.marcini.uk/latest.js"></script>
+    <noscript
+      ><img src="https://api.marcini.uk/noscript.gif" alt="No script"
+    /></noscript>
+    <script src="/assets/js/main.js" defer></script>
   </body>
 </html>
