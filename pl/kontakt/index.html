@@ -241,6 +241,37 @@
       </div>
     </footer>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Rozbijamy email na części
+        const user = "kontakt";
+        const domain = "marcini";
+        const tld = "uk";
+
+        // Tworzymy adres email
+        const email = `${user}@${domain}.${tld}`;
+
+        // Znajdujemy kontener
+        const contactDiv = document.getElementById("contact");
+
+        // Tworzymy element linku
+        const link = document.createElement("a");
+        link.href = `mailto:${email}`;
+        link.style.textDecoration = "none"; // Dodaj styl, jeśli chcesz
+        link.style.color = "inherit";
+
+        // Dodajemy każdy znak w oddzielnym `<span>`
+        for (const char of email) {
+          const span = document.createElement("span");
+          span.textContent = char; // Wstawianie widocznego znaku
+          link.appendChild(span); // Dodanie znaku do linku
+        }
+
+        // Dodajemy link do kontenera
+        contactDiv.appendChild(link);
+      });
+    </script>
+
     <script async defer src="https://api.marcini.uk/latest.js"></script>
     <noscript
       ><img src="https://api.marcini.uk/noscript.gif" alt=""

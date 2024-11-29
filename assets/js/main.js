@@ -176,28 +176,3 @@ document.querySelectorAll(".nowrap-single").forEach(function (element) {
 
   element.innerHTML = text;
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Rozbijamy email na części
-  const user = "kontakt";
-  const domain = "marcini";
-  const tld = "uk";
-
-  // Tworzymy adres email
-  const email = `${user}@${domain}.${tld}`;
-
-  // Umieszczamy go w DOM-ie
-  const contactDiv = document.getElementById("contact");
-  const link = document.createElement("a");
-  link.href = `mailto:${email}`;
-
-  // Wrzućmy link w kilka spanów dla utrudnienia botom
-  for (const char of email) {
-    const span = document.createElement("span");
-    span.textContent = char;
-    link.appendChild(span);
-  }
-
-  // Dodajemy link do kontenera
-  contactDiv.appendChild(link);
-});
