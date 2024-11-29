@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://marcini.uk/pl/ksiazki/historia</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/</loc>
-</url>
-<url>
-<loc>https://marcini.uk/</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/kontakt/</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/ksiazki/</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/polityka-prywatnosci/</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/profile/</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/projekty/</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/ksiazki/recenzje</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/setup/</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/ksiazki/statystyki</loc>
-</url>
-<url>
-<loc>https://marcini.uk/pl/ulubiency/</loc>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://marcini.uk/</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/ksiazki/</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/ksiazki/historia</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/ksiazki/recenzje</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/ksiazki/statystyki</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/polityka-prywatnosci/</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/profile/</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/projekty/</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/setup/</loc>
+  </url>
+  <url>
+    <loc>https://marcini.uk/pl/ulubiency/</loc>
+  </url>
 </urlset>
