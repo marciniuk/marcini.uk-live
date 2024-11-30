@@ -1888,6 +1888,7 @@ button,
   bottom: 0px;
 }
 a:focus,
-button:focus {
+button:focus,
+.bezzaznaczenia {
   outline: none;
 }
