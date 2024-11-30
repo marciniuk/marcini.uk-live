@@ -364,7 +364,7 @@ audio,
 iframe,
 embed,
 object {
-  display: inline-block; /* 1 */
+  display: block; /* 1 */
   vertical-align: middle; /* 2 */
 }
 
@@ -569,6 +569,9 @@ video {
 }
 .mb-4 {
   margin-bottom: 1rem;
+}
+.mb-10 {
+  margin-bottom: 5rem;
 }
 .mt-5 {
   margin-top: 1.25rem;
@@ -1886,9 +1889,4 @@ button,
 }
 .bottom-0 {
   bottom: 0px;
-}
-a:focus,
-button:focus,
-.bezzaznaczenia {
-  outline: none;
 }
