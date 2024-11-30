@@ -3,6 +3,7 @@
   <head> </head>
 
   <body class="bg-gray-900 text-gray-100 flex flex-col min-h-full">
+    <script src="/assets/js/hed.js"></script>
     <!-- Nawigacja -->
     <div id="naglowek"></div>
 
@@ -12,7 +13,7 @@
         <div class="md:w-3/5 m-auto">
           <div class="flex md:flex-row flex-col">
             <!-- Linki kontaktowe -->
-            <div class="m-3 md:w-full flex-col">
+            <div class="m-3 md:w-full flex-col bezzaznaczenia">
               <a href="https://t.me/AdrianMarciniuk">
                 <div class="bg-blue-600 rounded-t-lg bold p-3 pl-4 text-2xl">
                   <i class="fab fa-telegram-plane"></i> Telegram
@@ -26,7 +27,9 @@
             </div>
 
             <div class="m-3 md:w-full flex-col">
-              <div class="bg-green-600 rounded-t-lg bold p-3 pl-4 text-2xl">
+              <div
+                class="bg-green-600 rounded-t-lg bold p-3 pl-4 text-2xl bezzaznaczenia"
+              >
                 <i class="fas fa-at"></i> Email
               </div>
               <div class="bg-gray-700 rounded-b-lg p-3 text-right pr-4 text-xl">
@@ -43,7 +46,7 @@
           onsubmit="return submitForm();"
           class="mt-5 w-80 flex m-auto text-lg md:text-xl"
         >
-          <div class="flex flex-col items-center w-72 mx-auto">
+          <div class="flex flex-col items-center w-72 mx-auto bezzaznaczenia">
             <input
               type="hidden"
               name="accessKey"

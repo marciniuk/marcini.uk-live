@@ -1,5 +1,5 @@
 const htmlForNaglowek = `
-      <div class="sticky top-0 flex w-full z-10">
+      <div class="sticky top-0 flex w-full z-10 bezzaznaczenia">
         <nav class="bg-gray-700 lg:bg-gray-900 text-gray-400 w-full">
           <div class="px-6 mx-auto lg:mr-64 lg:ml-auto flex flex-col">
             <div class="flex justify-between items-center">
@@ -62,7 +62,7 @@ const htmlForNaglowek = `
 
 const htmlForStopka = `
     <footer
-      class="bg-gray-700 text-gray-300 mt-auto md:fixed w-full md:bottom-0 z-40"
+      class="bg-gray-700 text-gray-300 mt-auto fixed w-full bottom-0 z-40 bezzaznaczenia"
     >
       <div
         class="flex flex-col sm:flex-row sm:justify-around items-center px-5 py-4 lg:mr-64"

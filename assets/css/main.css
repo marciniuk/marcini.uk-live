@@ -1875,3 +1875,14 @@ ol {
 .nowrap {
   white-space: nowrap;
 }
+
+button,
+.bezzaznaczenia {
+  border: none; /* Brak obramowania */
+  user-select: none; /* Zablokowanie zaznaczania */
+  outline: none; /* Brak efektu zaznaczenia */
+  -webkit-appearance: none; /* Dodatkowo, usuwa domyślny wygląd w Safari */
+}
+.bottom-0 {
+  bottom: 0px;
+}
