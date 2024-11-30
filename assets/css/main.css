@@ -1878,11 +1878,16 @@ ol {
 
 button,
 .bezzaznaczenia {
-  border: none; /* Brak obramowania */
-  user-select: none; /* Zablokowanie zaznaczania */
-  outline: none; /* Brak efektu zaznaczenia */
-  -webkit-appearance: none; /* Dodatkowo, usuwa domyślny wygląd w Safari */
+  border: none;
+  user-select: none;
+  outline: none;
+  -webkit-appearance: none; /* Safari */
+  appearance: none; /* Inne przeglądarki */
 }
 .bottom-0 {
   bottom: 0px;
+}
+a:focus,
+button:focus {
+  outline: none;
 }
