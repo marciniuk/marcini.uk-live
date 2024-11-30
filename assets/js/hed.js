@@ -1,3 +1,6 @@
+// Usunięcie całej zawartości head
+document.head.innerHTML = "";
+
 document.addEventListener("DOMContentLoaded", function () {
   const headContent = `
       <meta charset="UTF-8" />
